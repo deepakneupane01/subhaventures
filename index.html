@@ -1,0 +1,3609 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Subha Ventures Limited — Innovate, Invest and Inspire</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /*─────────────────────────────────────────
+  RESET & ROOT
+─────────────────────────────────────────*/
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+        font-size: 16px;
+      }
+      body {
+        font-family: "Jost", sans-serif;
+        background: #fffef9;
+        color: #0b1f38;
+        overflow-x: hidden;
+        font-weight: 300;
+        line-height: 1.75;
+      }
+      img {
+        display: block;
+        max-width: 100%;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      ::-webkit-scrollbar {
+        width: 5px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f5f2ea;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #c9920c;
+        border-radius: 4px;
+      }
+
+      /*─────────────────────────────────────────
+  CSS VARIABLES
+─────────────────────────────────────────*/
+      :root {
+        --navy: #0b1f38;
+        --navy2: #163352;
+        --navy3: #1e4068;
+        --gold: #c9920c;
+        --gold2: #e0a820;
+        --gold3: #f5d87a;
+        --cream: #faf8f3;
+        --warm: #fffef9;
+        --gray: #f2efe8;
+        --tmid: #3a4f65;
+        --tsoft: #7a8ea0;
+        --bdr: rgba(201, 146, 12, 0.16);
+        --bdrl: rgba(11, 31, 56, 0.08);
+        --fh: "Cormorant Garamond", Georgia, serif;
+        --fb: "Jost", sans-serif;
+        --r: 5px;
+        --ease: cubic-bezier(0.22, 1, 0.36, 1);
+        --sh1: 0 2px 12px rgba(11, 31, 56, 0.07);
+        --sh2: 0 8px 32px rgba(11, 31, 56, 0.1);
+        --sh3: 0 20px 60px rgba(11, 31, 56, 0.14);
+      }
+
+      /*─────────────────────────────────────────
+  UTILITIES
+─────────────────────────────────────────*/
+      .wrap {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+      .pad {
+        padding: 96px 0;
+      }
+      .pad-sm {
+        padding: 72px 0;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.68rem;
+        font-weight: 600;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 0.9rem;
+      }
+      .eyebrow::before {
+        content: "";
+        width: 28px;
+        height: 1.5px;
+        background: linear-gradient(90deg, var(--gold), var(--gold2));
+        flex-shrink: 0;
+      }
+
+      h2.serif {
+        font-family: var(--fh);
+        font-size: clamp(2rem, 4vw, 3.4rem);
+        font-weight: 400;
+        line-height: 1.1;
+        color: var(--navy);
+      }
+      h2.serif em {
+        font-style: italic;
+        color: var(--gold);
+      }
+      .body-text {
+        font-size: 0.93rem;
+        font-weight: 300;
+        color: var(--tmid);
+        line-height: 1.9;
+      }
+      .rule {
+        width: 44px;
+        height: 2px;
+        background: linear-gradient(90deg, var(--gold), var(--gold2));
+        margin: 1.4rem 0;
+      }
+
+      /* Buttons */
+      .btn-gold {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 0.88rem 2rem;
+        background: linear-gradient(135deg, var(--gold), var(--gold2));
+        color: #fff;
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        border: none;
+        border-radius: var(--r);
+        cursor: pointer;
+        transition:
+          transform 0.3s var(--ease),
+          box-shadow 0.3s;
+        position: relative;
+        overflow: hidden;
+      }
+      .btn-gold::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(255, 255, 255, 0.12);
+        opacity: 0;
+        transition: opacity 0.25s;
+      }
+      .btn-gold:hover::after {
+        opacity: 1;
+      }
+      .btn-gold:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 28px rgba(201, 146, 12, 0.38);
+      }
+      .btn-ghost {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 0.88rem 2rem;
+        background: transparent;
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 0.78rem;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        border: 1.5px solid rgba(255, 255, 255, 0.2);
+        border-radius: var(--r);
+        transition:
+          border-color 0.3s,
+          color 0.3s;
+      }
+      .btn-ghost:hover {
+        border-color: var(--gold2);
+        color: var(--gold3);
+      }
+      .btn-navy {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 0.88rem 2rem;
+        background: var(--navy);
+        color: #fff;
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        border: none;
+        border-radius: var(--r);
+        cursor: pointer;
+        transition: all 0.3s var(--ease);
+      }
+      .btn-navy:hover {
+        background: var(--gold);
+        box-shadow: 0 8px 24px rgba(201, 146, 12, 0.32);
+        transform: translateY(-2px);
+      }
+
+      /* Image Placeholder */
+      .ph {
+        background: linear-gradient(135deg, var(--navy2), var(--navy3));
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        position: relative;
+        overflow: hidden;
+        border: 1.5px dashed rgba(201, 146, 12, 0.3);
+      }
+      .ph::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(
+          rgba(255, 255, 255, 0.03) 1px,
+          transparent 1px
+        );
+        background-size: 20px 20px;
+      }
+      .ph-ico {
+        width: 44px;
+        height: 44px;
+        opacity: 0.4;
+        position: relative;
+        z-index: 1;
+      }
+      .ph-lbl {
+        font-size: 0.65rem;
+        font-weight: 500;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: rgba(224, 168, 32, 0.65);
+        z-index: 1;
+        text-align: center;
+        padding: 0 0.8rem;
+        line-height: 1.5;
+      }
+      /* Universal image fit — works for ALL image slots */
+      .hero-img-main img,
+      .ais-main img,
+      .ais-accent img,
+      .port-img img,
+      .team-img img,
+      .testi-avatar img,
+      .about-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* Reveal animations */
+      .rv {
+        opacity: 0;
+        transform: translateY(28px);
+        transition:
+          opacity 0.85s var(--ease),
+          transform 0.85s var(--ease);
+      }
+      .rv.on {
+        opacity: 1;
+        transform: none;
+      }
+      .d1 {
+        transition-delay: 0.1s;
+      }
+      .d2 {
+        transition-delay: 0.2s;
+      }
+      .d3 {
+        transition-delay: 0.3s;
+      }
+      .d4 {
+        transition-delay: 0.4s;
+      }
+      .rv-left {
+        opacity: 0;
+        transform: translateX(-28px);
+        transition:
+          opacity 0.8s var(--ease),
+          transform 0.8s var(--ease);
+      }
+      .rv-left.on {
+        opacity: 1;
+        transform: none;
+      }
+      .rv-right {
+        opacity: 0;
+        transform: translateX(28px);
+        transition:
+          opacity 0.8s var(--ease),
+          transform 0.8s var(--ease);
+      }
+      .rv-right.on {
+        opacity: 1;
+        transform: none;
+      }
+
+      /*─────────────────────────────────────────
+  NAVBAR
+─────────────────────────────────────────*/
+      #nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        padding: 1.3rem 0;
+        transition: all 0.45s var(--ease);
+      }
+      #nav.scrolled {
+        background: rgba(250, 248, 243, 0.97);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        padding: 0.85rem 0;
+        box-shadow:
+          0 1px 0 var(--bdr),
+          var(--sh1);
+      }
+      .nav-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .logo-link {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .logo-emblem {
+        width: 40px;
+        height: 40px;
+        position: relative;
+        flex-shrink: 0;
+      }
+      .logo-emblem::before,
+      .logo-emblem::after {
+        content: "";
+        position: absolute;
+        transition: transform 0.4s var(--ease);
+      }
+      .logo-emblem::before {
+        inset: 0;
+        border: 2px solid var(--gold);
+      }
+      .logo-emblem::after {
+        inset: 7px;
+        background: var(--gold);
+        transform: rotate(45deg);
+      }
+      .logo-link:hover .logo-emblem::before {
+        transform: rotate(45deg);
+      }
+      .logo-link:hover .logo-emblem::after {
+        transform: rotate(90deg);
+      }
+      .logo-words strong {
+        display: block;
+        font-family: var(--fh);
+        font-size: 1.22rem;
+        font-weight: 700;
+        color: var(--navy);
+        line-height: 1;
+        letter-spacing: 0.01em;
+      }
+      .logo-words span {
+        display: block;
+        font-size: 0.55rem;
+        font-weight: 600;
+        letter-spacing: 0.26em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-top: 2px;
+      }
+
+      nav ul {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        list-style: none;
+      }
+      nav ul a {
+        font-size: 0.76rem;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--tmid);
+        position: relative;
+        transition: color 0.25s;
+      }
+      nav ul a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        width: 0;
+        height: 1.5px;
+        background: var(--gold);
+        transition: width 0.3s;
+      }
+      nav ul a:hover,
+      nav ul a.act {
+        color: var(--gold);
+      }
+      nav ul a:hover::after,
+      nav ul a.act::after {
+        width: 100%;
+      }
+      .nav-btn {
+        padding: 0.58rem 1.4rem;
+        background: var(--navy);
+        color: #fff !important;
+        border-radius: var(--r);
+        font-size: 0.74rem !important;
+        font-weight: 600 !important;
+        letter-spacing: 0.1em !important;
+        transition:
+          background 0.3s,
+          transform 0.2s,
+          box-shadow 0.3s !important;
+      }
+      .nav-btn::after {
+        display: none !important;
+      }
+      .nav-btn:hover {
+        background: var(--gold) !important;
+        box-shadow: 0 4px 16px rgba(201, 146, 12, 0.32) !important;
+        transform: translateY(-1px);
+      }
+
+      .hbg {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 6px;
+      }
+      .hbg span {
+        display: block;
+        width: 23px;
+        height: 1.5px;
+        background: var(--navy);
+        transition: all 0.3s;
+        transform-origin: center;
+      }
+      .hbg.open span:nth-child(1) {
+        transform: rotate(45deg) translate(4.5px, 4.5px);
+      }
+      .hbg.open span:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+      }
+      .hbg.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(4.5px, -4.5px);
+      }
+
+      .mob-menu {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: var(--cream);
+        z-index: 999;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.8rem;
+      }
+      .mob-menu.open {
+        display: flex;
+        animation: fadeIn 0.3s ease;
+      }
+      .mob-menu a {
+        font-family: var(--fh);
+        font-size: 2rem;
+        font-weight: 400;
+        color: var(--navy);
+        transition: color 0.25s;
+      }
+      .mob-menu a:hover {
+        color: var(--gold);
+      }
+      .mob-close {
+        position: absolute;
+        top: 1.5rem;
+        right: 2rem;
+        font-size: 1.5rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: var(--tmid);
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+
+      /*─────────────────────────────────────────
+  HERO
+─────────────────────────────────────────*/
+      #hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        background: var(--navy);
+        position: relative;
+        overflow: hidden;
+      }
+      .hero-grid-bg {
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(
+          rgba(201, 146, 12, 0.055) 1px,
+          transparent 1px
+        );
+        background-size: 34px 34px;
+      }
+      .hero-glow1 {
+        position: absolute;
+        top: -20%;
+        right: -8%;
+        width: 700px;
+        height: 700px;
+        background: radial-gradient(
+          circle,
+          rgba(201, 146, 12, 0.07) 0%,
+          transparent 65%
+        );
+        pointer-events: none;
+      }
+      .hero-glow2 {
+        position: absolute;
+        bottom: -25%;
+        left: -10%;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(
+          circle,
+          rgba(30, 64, 104, 0.8) 0%,
+          transparent 65%
+        );
+        pointer-events: none;
+      }
+      .hero-split {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 43%;
+        background: var(--navy2);
+        clip-path: polygon(13% 0, 100% 0, 100% 100%, 0 100%);
+      }
+      .hero-split-dots {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 43%;
+        clip-path: polygon(13% 0, 100% 0, 100% 100%, 0 100%);
+        background-image: radial-gradient(
+          rgba(255, 255, 255, 0.025) 1px,
+          transparent 1px
+        );
+        background-size: 22px 22px;
+      }
+
+      .hero-body {
+        position: relative;
+        z-index: 5;
+        width: 100%;
+        padding: 130px 0 90px;
+      }
+      .hero-cols {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+      }
+
+      .hero-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.68rem;
+        font-weight: 600;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        color: var(--gold2);
+        margin-bottom: 1.4rem;
+        animation: slideUp 0.8s ease both;
+      }
+      .hero-tag::before {
+        content: "";
+        width: 28px;
+        height: 1px;
+        background: var(--gold2);
+      }
+      .hero-h1 {
+        font-family: var(--fh);
+        font-size: clamp(3rem, 5.5vw, 5.2rem);
+        font-weight: 300;
+        line-height: 1.06;
+        color: #fff;
+        margin-bottom: 0.4rem;
+        animation: slideUp 0.8s 0.06s ease both;
+      }
+      .hero-h1 em {
+        font-style: italic;
+        color: var(--gold3);
+      }
+      .hero-tagline {
+        font-family: var(--fh);
+        font-style: italic;
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.45);
+        margin-bottom: 1.4rem;
+        animation: slideUp 0.8s 0.1s ease both;
+      }
+      .hero-desc {
+        font-size: 0.97rem;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.55);
+        line-height: 1.88;
+        max-width: 450px;
+        margin-bottom: 2.4rem;
+        animation: slideUp 0.8s 0.16s ease both;
+      }
+      .hero-btns {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-bottom: 3rem;
+        animation: slideUp 0.8s 0.22s ease both;
+      }
+
+      .hero-kpis {
+        display: flex;
+        gap: 2.2rem;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        flex-wrap: wrap;
+        animation: slideUp 0.8s 0.3s ease both;
+      }
+      .kpi-num {
+        font-family: var(--fh);
+        font-size: 2.1rem;
+        font-weight: 300;
+        color: #fff;
+        display: block;
+        line-height: 1;
+      }
+      .kpi-num sup {
+        font-size: 0.5em;
+        color: var(--gold2);
+      }
+      .kpi-lbl {
+        font-size: 0.6rem;
+        font-weight: 600;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.32);
+        margin-top: 4px;
+        display: block;
+      }
+
+      .hero-img-col {
+        position: relative;
+        animation: slideUp 0.9s 0.15s ease both;
+      }
+      .hero-img-main {
+        width: 100%;
+        height: 450px;
+        border-radius: var(--r);
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+      }
+      .hero-badge-main {
+        position: absolute;
+        bottom: -18px;
+        left: -18px;
+        background: var(--gold);
+        color: #fff;
+        padding: 1.1rem 1.4rem;
+        border-radius: var(--r);
+        box-shadow: 0 12px 30px rgba(201, 146, 12, 0.35);
+      }
+      .hero-badge-main strong {
+        display: block;
+        font-family: var(--fh);
+        font-size: 1.55rem;
+        font-weight: 700;
+        line-height: 1;
+      }
+      .hero-badge-main span {
+        font-size: 0.6rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        opacity: 0.88;
+      }
+      .hero-badge2 {
+        position: absolute;
+        top: 16px;
+        right: -12px;
+        background: var(--navy3);
+        color: #fff;
+        padding: 0.8rem 1.1rem;
+        border-radius: var(--r);
+        border: 1px solid rgba(201, 146, 12, 0.3);
+        text-align: center;
+        min-width: 120px;
+      }
+      .hero-badge2 strong {
+        display: block;
+        font-family: var(--fh);
+        font-size: 1.15rem;
+        color: var(--gold2);
+        line-height: 1;
+      }
+      .hero-badge2 span {
+        font-size: 0.62rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.6);
+        margin-top: 3px;
+        display: block;
+      }
+
+      /*─────────────────────────────────────────
+  MARQUEE
+─────────────────────────────────────────*/
+      .marquee-bar {
+        background: var(--gold);
+        overflow: hidden;
+        padding: 0.78rem 0;
+      }
+      .mq-inner {
+        display: inline-flex;
+        gap: 2.8rem;
+        animation: marquee 32s linear infinite;
+        white-space: nowrap;
+      }
+      .mq-item {
+        font-size: 0.66rem;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: #fff;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.9rem;
+      }
+      .mq-item::after {
+        content: "◆";
+        font-size: 0.35rem;
+        opacity: 0.5;
+      }
+      @keyframes marquee {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      /*─────────────────────────────────────────
+  ABOUT / OVERVIEW
+─────────────────────────────────────────*/
+      #about {
+        background: var(--warm);
+      }
+      .about-cols {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+        align-items: center;
+      }
+
+      .about-img-stack {
+        position: relative;
+        height: 520px;
+      }
+      .ais-main {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 80%;
+        height: 370px;
+        border-radius: var(--r);
+        box-shadow: var(--sh3);
+      }
+      .ais-accent {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 54%;
+        height: 240px;
+        border-radius: var(--r);
+        border: 5px solid var(--warm);
+        box-shadow: var(--sh3);
+      }
+      .ais-card {
+        position: absolute;
+        right: -8px;
+        bottom: 58px;
+        background: var(--gold);
+        color: #fff;
+        padding: 1.1rem 1.5rem;
+        border-radius: var(--r);
+        box-shadow: 0 12px 30px rgba(201, 146, 12, 0.32);
+        z-index: 5;
+      }
+      .ais-card strong {
+        display: block;
+        font-family: var(--fh);
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 1;
+      }
+      .ais-card span {
+        font-size: 0.6rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        opacity: 0.88;
+      }
+
+      /* Tabs */
+      .tab-nav {
+        display: flex;
+        border-bottom: 1px solid var(--bdrl);
+        margin: 1.8rem 0 0;
+      }
+      .tab-btn {
+        padding: 0.65rem 1.2rem;
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        background: none;
+        border: none;
+        border-bottom: 2.5px solid transparent;
+        cursor: pointer;
+        color: var(--tsoft);
+        transition: all 0.25s;
+        margin-bottom: -1px;
+      }
+      .tab-btn.active {
+        color: var(--gold);
+        border-bottom-color: var(--gold);
+      }
+      .tab-pane {
+        display: none;
+        padding: 1.2rem 0;
+        animation: fadeIn 0.3s ease;
+      }
+      .tab-pane.active {
+        display: block;
+      }
+
+      .values-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+        margin-top: 0.5rem;
+      }
+      .val-item {
+        display: flex;
+        gap: 0.8rem;
+        align-items: flex-start;
+        padding: 0.9rem 1rem;
+        background: var(--cream);
+        border: 1px solid var(--bdrl);
+        border-radius: var(--r);
+        transition:
+          border-color 0.25s,
+          transform 0.25s;
+      }
+      .val-item:hover {
+        border-color: var(--bdr);
+        transform: translateY(-2px);
+      }
+      .val-dot {
+        width: 6px;
+        height: 6px;
+        background: var(--gold);
+        border-radius: 50%;
+        flex-shrink: 0;
+        margin-top: 7px;
+      }
+      .val-item h4 {
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: var(--navy);
+        margin-bottom: 2px;
+      }
+      .val-item p {
+        font-size: 0.78rem;
+        font-weight: 300;
+        color: var(--tsoft);
+        line-height: 1.6;
+      }
+
+      .mission-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+      }
+      .mission-list li {
+        display: flex;
+        gap: 0.8rem;
+        font-size: 0.9rem;
+        font-weight: 300;
+        color: var(--tmid);
+        line-height: 1.7;
+      }
+      .mission-list li::before {
+        content: "◆";
+        color: var(--gold);
+        font-size: 0.45rem;
+        margin-top: 8px;
+        flex-shrink: 0;
+      }
+
+      /*─────────────────────────────────────────
+  SECTORS
+─────────────────────────────────────────*/
+      #sectors {
+        background: var(--cream);
+      }
+      .sectors-intro {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: end;
+        margin-bottom: 3.5rem;
+      }
+
+      /* Allocation bars */
+      .alloc-title {
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--tsoft);
+        margin-bottom: 1.1rem;
+      }
+      .alloc-bar-row {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        margin-bottom: 0.8rem;
+      }
+      .alloc-name {
+        font-size: 0.78rem;
+        font-weight: 500;
+        color: var(--navy);
+        min-width: 195px;
+      }
+      .alloc-track {
+        flex: 1;
+        height: 7px;
+        background: var(--gray);
+        border-radius: 4px;
+        overflow: hidden;
+      }
+      .alloc-fill {
+        height: 100%;
+        background: linear-gradient(90deg, var(--gold), var(--gold2));
+        border-radius: 4px;
+        width: 0;
+        transition: width 1.6s var(--ease);
+      }
+      .alloc-pct {
+        font-size: 0.76rem;
+        font-weight: 600;
+        color: var(--gold);
+        min-width: 32px;
+        text-align: right;
+      }
+
+      /* Sector cards grid */
+      .sec-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5px;
+        background: rgba(201, 146, 12, 0.12);
+      }
+      .sec-card {
+        background: var(--warm);
+        padding: 2.2rem 1.8rem;
+        position: relative;
+        overflow: hidden;
+        transition:
+          background 0.38s var(--ease),
+          transform 0.25s;
+        cursor: default;
+      }
+      .sec-card::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2.5px;
+        background: linear-gradient(90deg, var(--gold), var(--gold2));
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.38s var(--ease);
+      }
+      .sec-card:hover {
+        background: var(--navy);
+      }
+      .sec-card:hover::after {
+        transform: scaleX(1);
+      }
+      .sc-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 1.2rem;
+      }
+      .sc-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: var(--r);
+        background: rgba(201, 146, 12, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--gold);
+        transition:
+          background 0.38s,
+          color 0.38s;
+      }
+      .sc-icon svg {
+        width: 22px;
+        height: 22px;
+      }
+      .sec-card:hover .sc-icon {
+        background: rgba(201, 146, 12, 0.18);
+        color: var(--gold2);
+      }
+      .sc-alloc {
+        font-family: var(--fh);
+        font-size: 2.8rem;
+        font-weight: 300;
+        color: rgba(11, 31, 56, 0.06);
+        line-height: 1;
+        transition: color 0.38s;
+      }
+      .sec-card:hover .sc-alloc {
+        color: rgba(255, 255, 255, 0.07);
+      }
+      .sc-name {
+        font-family: var(--fh);
+        font-size: 1.08rem;
+        font-weight: 600;
+        color: var(--navy);
+        margin-bottom: 0.55rem;
+        transition: color 0.38s;
+      }
+      .sec-card:hover .sc-name {
+        color: #fff;
+      }
+      .sc-desc {
+        font-size: 0.82rem;
+        font-weight: 300;
+        color: var(--tsoft);
+        line-height: 1.72;
+        margin-bottom: 1rem;
+        transition: color 0.38s;
+      }
+      .sec-card:hover .sc-desc {
+        color: rgba(255, 255, 255, 0.48);
+      }
+      .sc-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.38rem;
+      }
+      .sc-tags span {
+        font-size: 0.6rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        padding: 3px 9px;
+        border-radius: 2px;
+        background: rgba(201, 146, 12, 0.08);
+        color: var(--gold);
+        border: 1px solid rgba(201, 146, 12, 0.18);
+        transition: all 0.38s;
+      }
+      .sec-card:hover .sc-tags span {
+        background: rgba(201, 146, 12, 0.12);
+        color: var(--gold3);
+        border-color: rgba(201, 146, 12, 0.22);
+      }
+
+      /* Sector detail accordion */
+      .sec-more {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s var(--ease);
+      }
+      .sec-more.open {
+        max-height: 200px;
+      }
+      .sec-more-inner {
+        padding: 0.8rem 0 0.2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.07);
+        margin-top: 0.8rem;
+      }
+      .sec-more-inner p {
+        font-size: 0.78rem;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.45);
+        line-height: 1.7;
+      }
+      .sec-toggle {
+        background: none;
+        border: none;
+        color: rgba(255, 255, 255, 0.3);
+        font-size: 0.65rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: color 0.25s;
+        margin-top: 0.8rem;
+        display: none;
+      }
+      .sec-card:hover .sec-toggle {
+        display: block;
+      }
+      .sec-toggle:hover {
+        color: var(--gold2);
+      }
+
+      /*─────────────────────────────────────────
+  IPO ROADMAP
+─────────────────────────────────────────*/
+      #ipo {
+        background: var(--navy);
+        position: relative;
+        overflow: hidden;
+      }
+      #ipo::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(
+          rgba(201, 146, 12, 0.045) 1px,
+          transparent 1px
+        );
+        background-size: 30px 30px;
+      }
+      .ipo-rel {
+        position: relative;
+        z-index: 2;
+      }
+      .ipo-head {
+        text-align: center;
+        margin-bottom: 3.5rem;
+      }
+      .ipo-head h2 {
+        color: #fff;
+      }
+      .ipo-head p {
+        color: rgba(255, 255, 255, 0.48);
+        max-width: 540px;
+        margin: 0.8rem auto 0;
+        text-align: center;
+        font-size: 0.95rem;
+        font-weight: 300;
+        line-height: 1.85;
+      }
+
+      /* Timeline */
+      .ipo-timeline {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+        position: relative;
+        margin-bottom: 3rem;
+      }
+      .ipo-timeline::before {
+        content: "";
+        position: absolute;
+        top: 28px;
+        left: 12.5%;
+        right: 12.5%;
+        height: 1.5px;
+        background: linear-gradient(
+          90deg,
+          var(--gold),
+          rgba(201, 146, 12, 0.2)
+        );
+        z-index: 0;
+      }
+      .ipo-step {
+        padding: 0 1rem;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+      }
+      .ipo-dot {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: var(--navy2);
+        border: 2px solid rgba(201, 146, 12, 0.35);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.2rem;
+        font-family: var(--fh);
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: var(--gold2);
+        transition: all 0.35s;
+      }
+      .ipo-step:hover .ipo-dot {
+        background: var(--gold);
+        border-color: var(--gold);
+        color: #fff;
+        transform: scale(1.1);
+      }
+      .ipo-stage {
+        font-size: 0.62rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 0.6rem;
+      }
+      .ipo-amount {
+        font-family: var(--fh);
+        font-size: 1.55rem;
+        font-weight: 300;
+        color: #fff;
+        line-height: 1;
+        margin-bottom: 0.3rem;
+      }
+      .ipo-amount small {
+        font-size: 0.55em;
+        color: var(--gold2);
+      }
+      .ipo-label {
+        font-size: 0.72rem;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.5);
+        line-height: 1.45;
+      }
+
+      .ipo-quote-box {
+        border: 1px solid rgba(201, 146, 12, 0.2);
+        border-radius: var(--r);
+        padding: 2rem 2.4rem;
+        background: rgba(255, 255, 255, 0.02);
+        text-align: center;
+      }
+      .ipo-quote-box blockquote {
+        font-family: var(--fh);
+        font-style: italic;
+        font-size: 1.08rem;
+        color: rgba(255, 255, 255, 0.82);
+        line-height: 1.8;
+      }
+      .ipo-quote-box cite {
+        display: block;
+        font-size: 0.65rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--gold2);
+        margin-top: 0.8rem;
+        font-style: normal;
+      }
+
+      /*─────────────────────────────────────────
+  STATS
+─────────────────────────────────────────*/
+      #stats {
+        background: var(--gray);
+      }
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .stat-cell {
+        padding: 2.8rem 2rem;
+        text-align: center;
+        border-right: 1px solid var(--bdrl);
+        transition: background 0.3s;
+      }
+      .stat-cell:last-child {
+        border-right: none;
+      }
+      .stat-cell:hover {
+        background: rgba(201, 146, 12, 0.04);
+      }
+      .stat-val {
+        font-family: var(--fh);
+        font-size: clamp(2.2rem, 4vw, 3.4rem);
+        font-weight: 300;
+        color: var(--navy);
+        display: block;
+        line-height: 1;
+      }
+      .stat-val sup,
+      .stat-val sub {
+        font-size: 0.45em;
+        color: var(--gold);
+      }
+      .stat-lbl {
+        font-size: 0.65rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--tsoft);
+        display: block;
+        margin-top: 0.6rem;
+      }
+      .stat-sub {
+        font-size: 0.7rem;
+        color: var(--tsoft);
+        margin-top: 0.25rem;
+        display: block;
+      }
+
+      /*─────────────────────────────────────────
+  GOVERNANCE
+─────────────────────────────────────────*/
+      #governance {
+        background: var(--warm);
+      }
+      .gov-cols {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+        align-items: start;
+      }
+      .gov-img {
+        width: 100%;
+        height: 460px;
+        border-radius: var(--r);
+        box-shadow: var(--sh2);
+      }
+
+      .gov-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.9rem;
+        margin-top: 1.4rem;
+      }
+      .gov-item {
+        display: flex;
+        gap: 1rem;
+        padding: 1rem 1.2rem;
+        border: 1px solid var(--bdrl);
+        border-radius: var(--r);
+        transition: all 0.3s var(--ease);
+      }
+      .gov-item:hover {
+        border-color: var(--bdr);
+        background: var(--cream);
+        transform: translateX(4px);
+      }
+      .gov-num {
+        font-family: var(--fh);
+        font-size: 1.3rem;
+        font-weight: 300;
+        color: var(--gold);
+        flex-shrink: 0;
+        line-height: 1;
+        margin-top: 2px;
+      }
+      .gov-item h4 {
+        font-size: 0.88rem;
+        font-weight: 600;
+        color: var(--navy);
+        margin-bottom: 3px;
+      }
+      .gov-item p {
+        font-size: 0.82rem;
+        font-weight: 300;
+        color: var(--tsoft);
+        line-height: 1.65;
+      }
+
+      .investors-box {
+        background: var(--navy);
+        padding: 1.8rem 2rem;
+        border-radius: var(--r);
+        margin-top: 1.8rem;
+      }
+      .investors-box h4 {
+        font-family: var(--fh);
+        font-size: 1.15rem;
+        font-weight: 400;
+        color: #fff;
+        margin-bottom: 0.4rem;
+      }
+      .investors-box p {
+        font-size: 0.8rem;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.45);
+        margin-bottom: 1rem;
+      }
+      .inv-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+      }
+      .inv-item {
+        display: flex;
+        gap: 0.6rem;
+        align-items: center;
+        font-size: 0.8rem;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.62);
+      }
+      .inv-dot {
+        width: 5px;
+        height: 5px;
+        background: var(--gold2);
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+
+      /*─────────────────────────────────────────
+  5-YEAR ROADMAP
+─────────────────────────────────────────*/
+      #roadmap {
+        background: var(--cream);
+      }
+      .roadmap-intro {
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto 3.5rem;
+      }
+      .roadmap-intro p {
+        margin: 0.8rem auto 0;
+        font-size: 0.95rem;
+        font-weight: 300;
+        color: var(--tmid);
+        line-height: 1.85;
+      }
+
+      .road-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+      }
+      .road-card {
+        background: var(--warm);
+        border: 1px solid var(--bdrl);
+        border-radius: var(--r);
+        padding: 1.8rem;
+        transition: all 0.35s var(--ease);
+      }
+      .road-card:hover {
+        border-color: var(--bdr);
+        box-shadow: var(--sh2);
+        transform: translateY(-4px);
+      }
+      .road-yr {
+        font-family: var(--fh);
+        font-size: 2.2rem;
+        font-weight: 300;
+        color: rgba(201, 146, 12, 0.22);
+        line-height: 1;
+        margin-bottom: 0.6rem;
+      }
+      .road-title {
+        font-family: var(--fh);
+        font-size: 1.06rem;
+        font-weight: 600;
+        color: var(--navy);
+        margin-bottom: 0.8rem;
+      }
+      .road-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.45rem;
+      }
+      .road-list li {
+        font-size: 0.82rem;
+        font-weight: 300;
+        color: var(--tsoft);
+        display: flex;
+        gap: 0.6rem;
+        align-items: flex-start;
+        line-height: 1.55;
+      }
+      .road-list li::before {
+        content: "◆";
+        color: var(--gold);
+        font-size: 0.42rem;
+        margin-top: 5px;
+        flex-shrink: 0;
+      }
+      .road-card.dark {
+        background: var(--navy);
+        border-color: rgba(201, 146, 12, 0.18);
+      }
+      .road-card.dark .road-yr {
+        color: rgba(201, 146, 12, 0.28);
+      }
+      .road-card.dark .road-title {
+        color: #fff;
+      }
+      .road-card.dark .road-list li {
+        color: rgba(255, 255, 255, 0.47);
+      }
+      .road-card.dark .road-list li::before {
+        color: var(--gold2);
+      }
+
+      /*─────────────────────────────────────────
+  COMMITMENT
+─────────────────────────────────────────*/
+      #commitment {
+        background: var(--navy);
+      }
+      .commit-head {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+      .commit-head h2 {
+        color: #fff;
+      }
+      .commit-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+      }
+      .commit-card {
+        padding: 2rem 1.6rem;
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        border-radius: var(--r);
+        transition: all 0.35s var(--ease);
+      }
+      .commit-card:hover {
+        background: rgba(255, 255, 255, 0.04);
+        border-color: rgba(201, 146, 12, 0.22);
+        transform: translateY(-3px);
+      }
+      .commit-ico {
+        width: 46px;
+        height: 46px;
+        border-radius: var(--r);
+        background: rgba(201, 146, 12, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--gold);
+        margin-bottom: 1.2rem;
+      }
+      .commit-ico svg {
+        width: 20px;
+        height: 20px;
+      }
+      .commit-title {
+        font-family: var(--fh);
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 0.6rem;
+      }
+      .commit-desc {
+        font-size: 0.82rem;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.47);
+        line-height: 1.72;
+      }
+
+      /*─────────────────────────────────────────
+  CONTACT
+─────────────────────────────────────────*/
+      #contact {
+        background: var(--warm);
+      }
+      .contact-cols {
+        display: grid;
+        grid-template-columns: 1fr 1.12fr;
+        gap: 5rem;
+        align-items: start;
+      }
+
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 1.4rem;
+      }
+      .ci-row {
+        display: flex;
+        gap: 0.9rem;
+        align-items: flex-start;
+      }
+      .ci-ico {
+        width: 42px;
+        height: 42px;
+        border: 1px solid var(--bdr);
+        border-radius: var(--r);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--gold);
+        flex-shrink: 0;
+        transition: all 0.25s;
+      }
+      .ci-ico svg {
+        width: 17px;
+        height: 17px;
+      }
+      .ci-row:hover .ci-ico {
+        background: var(--gold);
+        color: #fff;
+      }
+      .ci-lbl {
+        font-size: 0.6rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 3px;
+      }
+      .ci-val {
+        font-size: 0.88rem;
+        font-weight: 400;
+        color: var(--navy);
+        line-height: 1.55;
+      }
+
+      .map-box {
+        margin-top: 1.8rem;
+        border-radius: var(--r);
+        overflow: hidden;
+        border: 1px solid var(--bdrl);
+        box-shadow: var(--sh1);
+      }
+      .map-box iframe {
+        display: block;
+        width: 100%;
+        height: 210px;
+        border: none;
+      }
+
+      /* Form */
+      .form-box {
+        background: var(--cream);
+        border: 1px solid var(--bdrl);
+        border-radius: var(--r);
+        padding: 2.2rem;
+      }
+      .form-tabs {
+        display: flex;
+        border-bottom: 1px solid var(--bdrl);
+        margin-bottom: 1.8rem;
+      }
+      .ftab {
+        padding: 0.62rem 1.1rem;
+        font-size: 0.68rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        background: none;
+        border: none;
+        border-bottom: 2.5px solid transparent;
+        cursor: pointer;
+        color: var(--tsoft);
+        transition: all 0.25s;
+        margin-bottom: -1px;
+      }
+      .ftab.active {
+        color: var(--gold);
+        border-bottom-color: var(--gold);
+      }
+      .fg {
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+        margin-bottom: 1.1rem;
+      }
+      .fl {
+        font-size: 0.6rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--tsoft);
+      }
+      .fi,
+      .fsel,
+      .fta {
+        width: 100%;
+        padding: 0.78rem 0.95rem;
+        background: var(--warm);
+        border: 1px solid rgba(11, 31, 56, 0.1);
+        border-radius: var(--r);
+        font-family: var(--fb);
+        font-size: 0.88rem;
+        font-weight: 300;
+        color: var(--navy);
+        outline: none;
+        transition:
+          border-color 0.25s,
+          box-shadow 0.25s;
+      }
+      .fi:focus,
+      .fsel:focus,
+      .fta:focus {
+        border-color: var(--gold);
+        box-shadow: 0 0 0 3px rgba(201, 146, 12, 0.1);
+      }
+      .fi::placeholder,
+      .fta::placeholder {
+        color: rgba(11, 31, 56, 0.28);
+      }
+      .fta {
+        resize: vertical;
+        min-height: 100px;
+      }
+      .fsel {
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='11' fill='%237a8ea0' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 0.9rem center;
+        cursor: pointer;
+      }
+      .frow2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.9rem;
+      }
+      .fsub {
+        width: 100%;
+        padding: 0.95rem;
+        background: linear-gradient(135deg, var(--navy), var(--navy2));
+        color: #fff;
+        font-family: var(--fb);
+        font-size: 0.76rem;
+        font-weight: 600;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        border: none;
+        border-radius: var(--r);
+        cursor: pointer;
+        transition: all 0.35s var(--ease);
+        margin-top: 0.4rem;
+      }
+      .fsub:hover {
+        background: linear-gradient(135deg, var(--gold), var(--gold2));
+        box-shadow: 0 6px 20px rgba(201, 146, 12, 0.3);
+        transform: translateY(-1px);
+      }
+      .form-success {
+        display: none;
+        text-align: center;
+        padding: 3rem 1rem;
+      }
+      .form-success.show {
+        display: block;
+        animation: fadeIn 0.5s ease;
+      }
+      .fs-ico {
+        width: 58px;
+        height: 58px;
+        margin: 0 auto 1rem;
+        background: rgba(22, 163, 74, 0.08);
+        border: 2px solid rgba(22, 163, 74, 0.25);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #16a34a;
+      }
+      .fs-ico svg {
+        width: 26px;
+        height: 26px;
+      }
+
+      /*─────────────────────────────────────────
+  FOOTER
+─────────────────────────────────────────*/
+      footer {
+        background: var(--navy);
+      }
+      .ft-top {
+        padding: 3.5rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+      }
+      .ft-grid {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        gap: 2.5rem;
+      }
+      .ft-brand-text strong {
+        display: block;
+        font-family: var(--fh);
+        font-size: 1.22rem;
+        font-weight: 700;
+        color: #fff;
+        letter-spacing: 0.01em;
+      }
+      .ft-brand-text span {
+        display: block;
+        font-size: 0.54rem;
+        font-weight: 600;
+        letter-spacing: 0.26em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-top: 2px;
+      }
+      .ft-about {
+        font-size: 0.82rem;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.36);
+        line-height: 1.82;
+        margin-top: 1rem;
+        max-width: 240px;
+      }
+      .ft-col-h {
+        font-size: 0.63rem;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.4);
+        margin-bottom: 1.2rem;
+      }
+      .ft-links {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+      .ft-links a {
+        font-size: 0.82rem;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.37);
+        transition:
+          color 0.25s,
+          transform 0.25s;
+        display: inline-block;
+      }
+      .ft-links a:hover {
+        color: var(--gold2);
+        transform: translateX(3px);
+      }
+      .ft-bot {
+        padding: 1.4rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      .ft-copy {
+        font-size: 0.72rem;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.22);
+      }
+      .ft-legal {
+        display: flex;
+        gap: 1.4rem;
+      }
+      .ft-legal a {
+        font-size: 0.7rem;
+        color: rgba(255, 255, 255, 0.22);
+        transition: color 0.25s;
+      }
+      .ft-legal a:hover {
+        color: var(--gold);
+      }
+
+      /*─────────────────────────────────────────
+  RESPONSIVE
+─────────────────────────────────────────*/
+      @media (max-width: 1080px) {
+        .ft-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .ipo-timeline {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 2rem;
+        }
+        .ipo-timeline::before {
+          display: none;
+        }
+        .stats-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .stat-cell {
+          border-bottom: 1px solid var(--bdrl);
+        }
+      }
+      @media (max-width: 900px) {
+        .hero-cols {
+          grid-template-columns: 1fr;
+        }
+        .hero-split,
+        .hero-split-dots,
+        .hero-img-col {
+          display: none;
+        }
+        .about-cols,
+        .gov-cols,
+        .contact-cols {
+          grid-template-columns: 1fr;
+        }
+        .sectors-intro {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+        .sec-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .commit-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .road-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .about-img-stack {
+          height: 300px;
+          margin-bottom: 2.5rem;
+        }
+        .values-grid {
+          grid-template-columns: 1fr;
+        }
+        .alloc-name {
+          min-width: 150px;
+        }
+      }
+      @media (max-width: 768px) {
+        nav ul,
+        .nav-btn-li {
+          display: none;
+        }
+        .hbg {
+          display: flex;
+        }
+        .pad {
+          padding: 64px 0;
+        }
+        .pad-sm {
+          padding: 56px 0;
+        }
+        .hero-body {
+          padding: 106px 0 70px;
+        }
+        .frow2 {
+          grid-template-columns: 1fr;
+        }
+        .hero-kpis {
+          gap: 1.4rem;
+        }
+        .wrap {
+          padding: 0 1.3rem;
+        }
+      }
+      @media (max-width: 560px) {
+        .sec-grid {
+          grid-template-columns: 1fr;
+        }
+        .road-grid {
+          grid-template-columns: 1fr;
+        }
+        .commit-grid {
+          grid-template-columns: 1fr;
+        }
+        .stats-grid {
+          grid-template-columns: 1fr;
+        }
+        .ipo-timeline {
+          grid-template-columns: 1fr;
+        }
+        .ft-grid {
+          grid-template-columns: 1fr;
+        }
+        .inv-grid {
+          grid-template-columns: 1fr;
+        }
+        .hero-btns {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        h2.serif {
+          font-size: clamp(1.8rem, 8vw, 3.4rem);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ═══════════ NAVBAR ═══════════ -->
+    <nav id="nav">
+      <div class="wrap">
+        <div class="nav-wrap">
+          <a href="#hero" class="logo-link">
+            <div class="logo-emblem"></div>
+            <div class="logo-words">
+              <strong>Subha Ventures</strong>
+              <span>Innovate · Invest · Inspire</span>
+            </div>
+          </a>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#sectors">Sectors</a></li>
+            <li><a href="#ipo">IPO Vision</a></li>
+            <li><a href="#governance">Governance</a></li>
+            <li><a href="#roadmap">Roadmap</a></li>
+            <li class="nav-btn-li">
+              <a href="#contact" class="nav-btn">Invest With Us</a>
+            </li>
+          </ul>
+          <button class="hbg" id="hbg" aria-label="Open menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mob-menu" id="mob">
+      <button class="mob-close" id="mob-close">✕</button>
+      <a href="#about" class="ml">About</a>
+      <a href="#sectors" class="ml">Sectors</a>
+      <a href="#ipo" class="ml">IPO Vision</a>
+      <a href="#governance" class="ml">Governance</a>
+      <a href="#roadmap" class="ml">Roadmap</a>
+      <a href="#contact" class="ml">Contact</a>
+    </div>
+
+    <!-- ═══════════ HERO ═══════════ -->
+    <section id="hero">
+      <div class="hero-grid-bg"></div>
+      <div class="hero-glow1"></div>
+      <div class="hero-glow2"></div>
+      <div class="hero-split"></div>
+      <div class="hero-split-dots"></div>
+
+      <div class="hero-body">
+        <div class="wrap">
+          <div class="hero-cols">
+            <!-- Left copy -->
+            <div>
+              <div class="hero-tag">
+                🇳🇵 Nepali Corporate · Multi-Sector Investment
+              </div>
+              <h1 class="hero-h1">
+                Innovate,<br /><em>Invest</em> and<br />Inspire
+              </h1>
+              <p class="hero-tagline">— Subha Ventures Limited</p>
+              <p class="hero-desc">
+                An emerging, future-focused Nepali corporate entity building a
+                diversified public limited company with strong governance,
+                credible leadership, and sectoral depth across Nepal's growing
+                economy.
+              </p>
+              <div class="hero-btns">
+                <a href="#sectors" class="btn-gold">
+                  <svg
+                    width="15"
+                    height="15"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M13 7l5 5-5 5M6 12h12"
+                    />
+                  </svg>
+                  Explore Sectors
+                </a>
+                <a href="#contact" class="btn-ghost">Invest With Us</a>
+              </div>
+              <div class="hero-kpis">
+                <div>
+                  <span class="kpi-num">NPR 50<sup>M</sup></span>
+                  <span class="kpi-lbl">Authorized Capital</span>
+                </div>
+                <div>
+                  <span class="kpi-num">35<sup>–40</sup></span>
+                  <span class="kpi-lbl">Current Shareholders</span>
+                </div>
+                <div>
+                  <span class="kpi-num">5</span>
+                  <span class="kpi-lbl">Core Sectors</span>
+                </div>
+                <div>
+                  <span class="kpi-num">2084</span>
+                  <span class="kpi-lbl">IPO Target (BS)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right image -->
+            <div class="hero-img-col">
+              <div class="hero-img-main">
+                <img
+                  src="assets/image1.png"
+                  alt="Subha Ventures Investment Growth"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+                    border-radius: 5px;
+                  "
+                />
+              </div>
+              <div class="hero-badge-main">
+                <strong>NPR 500M</strong>
+                <span>Target Paid-up Capital</span>
+              </div>
+              <div class="hero-badge2">
+                <strong>2083/84</strong>
+                <span>IPO Target</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ MARQUEE ═══════════ -->
+    <div class="marquee-bar">
+      <div class="mq-inner">
+        <span class="mq-item">Information Technology · 25%</span>
+        <span class="mq-item">Hospitality &amp; Tourism · 25%</span>
+        <span class="mq-item">Manufacturing — Polymers · 20%</span>
+        <span class="mq-item">Agriculture — Coffee &amp; Tea · 15%</span>
+        <span class="mq-item">Power Sector — Hydro &amp; Solar · 15%</span>
+        <span class="mq-item">Digital Banking &amp; Fintech</span>
+        <span class="mq-item">Bagdol, Lalitpur · Nepal</span>
+        <span class="mq-item">Information Technology · 25%</span>
+        <span class="mq-item">Hospitality &amp; Tourism · 25%</span>
+        <span class="mq-item">Manufacturing — Polymers · 20%</span>
+        <span class="mq-item">Agriculture — Coffee &amp; Tea · 15%</span>
+        <span class="mq-item">Power Sector — Hydro &amp; Solar · 15%</span>
+        <span class="mq-item">Digital Banking &amp; Fintech</span>
+        <span class="mq-item">Bagdol, Lalitpur · Nepal</span>
+      </div>
+    </div>
+
+    <!-- ═══════════ ABOUT ═══════════ -->
+    <section id="about" class="pad">
+      <div class="wrap">
+        <div class="about-cols">
+          <!-- Image stack -->
+          <div class="about-img-stack rv rv-left">
+            <div class="ais-main ph">
+              <img
+                src="assets/image16.png"
+                alt="Subha Ventures Office"
+                style="
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  display: block;
+                  border-radius: 5px;
+                "
+              />
+              <svg
+                class="ph-ico"
+                fill="none"
+                stroke="rgba(224,168,32,.5)"
+                stroke-width="1.2"
+                viewBox="0 0 24 24"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <circle cx="8.5" cy="8.5" r="1.5" />
+                <path d="m21 15-5-5L5 21" />
+              </svg>
+              <span class="ph-lbl"
+                >Company / Office Photo<br />480 × 370 px</span
+              >
+            </div>
+            <div class="ais-accent ph">
+              <img
+                src="assets/image2.png"
+                alt="Team"
+                style="
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  display: block;
+                  border-radius: 5px;
+                "
+              />
+              <svg
+                style="width: 30px; height: 30px; opacity: 0.38"
+                fill="none"
+                stroke="rgba(224,168,32,.5)"
+                stroke-width="1.2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"
+                />
+              </svg>
+              <span class="ph-lbl">Team Photo<br />260 × 240 px</span>
+            </div>
+            <div class="ais-card">
+              <strong>150</strong>
+              <span>Target Shareholders</span>
+            </div>
+          </div>
+
+          <!-- Text -->
+          <div class="rv rv-right">
+            <span class="eyebrow">About Subha Ventures</span>
+            <h2 class="serif">
+              Building Nepal's Next<br /><em>Great Institution</em>
+            </h2>
+            <div class="rule"></div>
+            <p class="body-text" style="margin-bottom: 0.9rem">
+              Originally incorporated as
+              <strong>Jagatra Devi Investment Private Limited</strong>, Subha
+              Ventures Limited has undergone a strategic transformation —
+              increasing authorized capital to NPR 50 million and adopting a
+              broader, more ambitious corporate identity.
+            </p>
+            <p class="body-text">
+              The company is now preparing for conversion into a
+              <strong>Public Limited Company</strong>, targeting paid-up capital
+              of NPR 500 million (50 Crore), expanding to approximately 150
+              long-term, committed shareholders.
+            </p>
+
+            <!-- Vision / Mission / Values Tabs -->
+            <div class="tab-nav">
+              <button class="tab-btn active" data-tab="vision">Vision</button>
+              <button class="tab-btn" data-tab="mission">Mission</button>
+              <button class="tab-btn" data-tab="values">Core Values</button>
+            </div>
+
+            <div id="vision" class="tab-pane active">
+              <p class="body-text">
+                To become a leading Nepali public investment and management
+                company that drives sustainable economic growth, fosters
+                innovation, and delivers long-term value to shareholders,
+                partners, and society.
+              </p>
+            </div>
+            <div id="mission" class="tab-pane">
+              <ul class="mission-list">
+                <li>
+                  Invest responsibly in high-growth, future-ready sectors of
+                  Nepal's economy.
+                </li>
+                <li>
+                  Build professionally managed businesses with strong governance
+                  structures.
+                </li>
+                <li>
+                  Maximize shareholder value through ethical practices,
+                  innovation, and operational excellence.
+                </li>
+                <li>
+                  Contribute meaningfully to Nepal's economic development and
+                  employment generation.
+                </li>
+              </ul>
+            </div>
+            <div id="values" class="tab-pane">
+              <div class="values-grid">
+                <div class="val-item">
+                  <div class="val-dot"></div>
+                  <div>
+                    <h4>Integrity</h4>
+                    <p>
+                      Transparency, accountability, and ethical conduct in all
+                      business activities.
+                    </p>
+                  </div>
+                </div>
+                <div class="val-item">
+                  <div class="val-dot"></div>
+                  <div>
+                    <h4>Professionalism</h4>
+                    <p>
+                      Decisions driven by expertise, data, and long-term
+                      strategic thinking.
+                    </p>
+                  </div>
+                </div>
+                <div class="val-item">
+                  <div class="val-dot"></div>
+                  <div>
+                    <h4>Sustainability</h4>
+                    <p>
+                      Long-term value creation prioritized over short-term
+                      speculative gains.
+                    </p>
+                  </div>
+                </div>
+                <div class="val-item">
+                  <div class="val-dot"></div>
+                  <div>
+                    <h4>Innovation</h4>
+                    <p>
+                      Embracing technology and new business models to stay
+                      competitive.
+                    </p>
+                  </div>
+                </div>
+                <div class="val-item" style="grid-column: 1/-1">
+                  <div class="val-dot"></div>
+                  <div>
+                    <h4>Shareholder Alignment</h4>
+                    <p>
+                      Protecting and enhancing shareholder interests at every
+                      stage of growth.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ SECTORS ═══════════ -->
+    <section id="sectors" class="pad">
+      <div class="wrap">
+        <div class="sectors-intro">
+          <div class="rv">
+            <span class="eyebrow">Core Business Sectors</span>
+            <h2 class="serif">
+              Five Sectors Aligned<br />with <em>Nepal's Future</em>
+            </h2>
+          </div>
+          <div class="rv d1">
+            <p class="body-text" style="margin-bottom: 1.4rem">
+              Each sector selected for strategic alignment with Nepal's economic
+              trajectory, global trends, and long-term competitive advantage.
+            </p>
+            <div class="alloc-title">Capital Allocation</div>
+            <div id="alloc-bars">
+              <div class="alloc-bar-row">
+                <span class="alloc-name">Information Technology</span>
+                <div class="alloc-track">
+                  <div class="alloc-fill" data-w="25"></div>
+                </div>
+                <span class="alloc-pct">25%</span>
+              </div>
+              <div class="alloc-bar-row">
+                <span class="alloc-name">Hospitality &amp; Tourism</span>
+                <div class="alloc-track">
+                  <div class="alloc-fill" data-w="25"></div>
+                </div>
+                <span class="alloc-pct">25%</span>
+              </div>
+              <div class="alloc-bar-row">
+                <span class="alloc-name">Manufacturing (Polymers)</span>
+                <div class="alloc-track">
+                  <div class="alloc-fill" data-w="20"></div>
+                </div>
+                <span class="alloc-pct">20%</span>
+              </div>
+              <div class="alloc-bar-row">
+                <span class="alloc-name">Agriculture (Coffee &amp; Tea)</span>
+                <div class="alloc-track">
+                  <div class="alloc-fill" data-w="15"></div>
+                </div>
+                <span class="alloc-pct">15%</span>
+              </div>
+              <div class="alloc-bar-row">
+                <span class="alloc-name">Power (Hydro &amp; Solar)</span>
+                <div class="alloc-track">
+                  <div class="alloc-fill" data-w="15"></div>
+                </div>
+                <span class="alloc-pct">15%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sec-grid">
+          <!-- IT -->
+          <div class="sec-card rv">
+            <div class="sc-head">
+              <div class="sc-icon">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.3 24.3 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15M14.25 3.104c.251.023.501.05.75.082"
+                  />
+                </svg>
+              </div>
+              <span class="sc-alloc">25%</span>
+            </div>
+            <div class="sc-name">Information Technology &amp; AI</div>
+            <div class="sc-desc">
+              Highest-priority sector. IT subsidiary already established as a
+              wholly owned company. Cutting-edge AI-enabled software
+              development, digital solutions, IT consulting, and export-oriented
+              technology services.
+            </div>
+            <div class="sc-tags">
+              <span>Software Dev</span><span>AI Enabled</span
+              ><span>Digital Solutions</span><span>Export-Ready</span>
+            </div>
+            <!-- Image space for sector -->
+            <div
+              style="
+                width: 100%;
+                height: 130px;
+                margin-top: 1.1rem;
+                border-radius: 3px;
+                overflow: hidden;
+                object-fit: cover;
+                display: block;
+              "
+              class="ph"
+            >
+              <img
+                src="assets/image10.png"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+              <span class="ph-lbl" style="font-size: 0.58rem"
+                >IT / Technology Image · 380×130px</span
+              >
+            </div>
+          </div>
+
+          <!-- Hospitality -->
+          <div class="sec-card rv d1">
+            <div class="sc-head">
+              <div class="sc-icon">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75"
+                  />
+                </svg>
+              </div>
+              <span class="sc-alloc">25%</span>
+            </div>
+            <div class="sc-name">Hospitality &amp; Tourism</div>
+            <div class="sc-desc">
+              Boutique star hotel in Kathmandu under own brand. Medium-term
+              plans for hotels in Pokhara and resorts in Chitwan — capitalizing
+              on Nepal's world-class and recovering tourism sector.
+            </div>
+            <div class="sc-tags">
+              <span>Kathmandu Hotel</span><span>Pokhara</span
+              ><span>Chitwan Resort</span>
+            </div>
+            <div
+              style="
+                width: 100%;
+                height: 130px;
+                margin-top: 1.1rem;
+                border-radius: 3px;
+                overflow: hidden;
+                object-fit: cover;
+                display: block;
+              "
+              class="ph"
+            >
+              <img
+                src="assets/image7.png"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+              <span class="ph-lbl" style="font-size: 0.58rem"
+                >Hotel / Resort Image · 380×130px</span
+              >
+            </div>
+          </div>
+
+          <!-- Manufacturing -->
+          <div class="sec-card rv d2">
+            <div class="sc-head">
+              <div class="sc-icon">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085"
+                  />
+                </svg>
+              </div>
+              <span class="sc-alloc">20%</span>
+            </div>
+            <div class="sc-name">Manufacturing — Polymers</div>
+            <div class="sc-desc">
+              Entering polymers production where Nepal has a clear competitive
+              advantage. Import substitution focus, efficient production, and
+              regional export potential — contributing to Nepal's industrial
+              base.
+            </div>
+            <div class="sc-tags">
+              <span>Polymers</span><span>Import Substitution</span
+              ><span>Industrial</span>
+            </div>
+            <div
+              style="
+                width: 100%;
+                height: 130px;
+                margin-top: 1.1rem;
+                border-radius: 3px;
+                overflow: hidden;
+                object-fit: cover;
+                display: block;
+              "
+              class="ph"
+            >
+              <img
+                src="assets/image4.png"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+
+              <span class="ph-lbl" style="font-size: 0.58rem"
+                >Manufacturing Plant Image · 380×130px</span
+              >
+            </div>
+          </div>
+
+          <!-- Agriculture -->
+          <div class="sec-card rv">
+            <div class="sc-head">
+              <div class="sc-icon">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+                  />
+                </svg>
+              </div>
+              <span class="sc-alloc">15%</span>
+            </div>
+            <div class="sc-name">Agriculture — Coffee &amp; Tea</div>
+            <div class="sc-desc">
+              Strategic 15% equity in Nepal's high-potential coffee and tea
+              export sector. Organic farming, full value chain from plantation
+              to international market access, farmer partnership and capacity
+              building.
+            </div>
+            <div class="sc-tags">
+              <span>Export-Ready</span><span>Organic Farming</span
+              ><span>Value Chain</span>
+            </div>
+            <div
+              style="
+                width: 100%;
+                height: 130px;
+                margin-top: 1.1rem;
+                border-radius: 3px;
+                overflow: hidden;
+                object-fit: cover;
+                display: block;
+              "
+              class="ph"
+            >
+              <img
+                src="assets/image8.png"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+              <span class="ph-lbl" style="font-size: 0.58rem"
+                >Coffee / Tea Plantation Image · 380×130px</span
+              >
+            </div>
+          </div>
+
+          <!-- Power -->
+          <div class="sec-card rv d1">
+            <div class="sc-head">
+              <div class="sc-icon">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
+                  />
+                </svg>
+              </div>
+              <span class="sc-alloc">15%</span>
+            </div>
+            <div class="sc-name">Power — Hydro &amp; Solar</div>
+            <div class="sc-desc">
+              Investing in Nepal's abundant hydropower river systems and
+              scalable solar energy. Aligns with national energy security goals,
+              rising demand, and Nepal's transition toward a green economy.
+            </div>
+            <div class="sc-tags">
+              <span>Hydropower</span><span>Solar Energy</span
+              ><span>Green Economy</span>
+            </div>
+            <div
+              style="
+                width: 100%;
+                height: 130px;
+                margin-top: 1.1rem;
+                border-radius: 3px;
+                overflow: hidden;
+                object-fit: cover;
+                display: block;
+              "
+              class="ph"
+            >
+              <img
+                src="assets/image12.png"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+              <span class="ph-lbl" style="font-size: 0.58rem"
+                >Solar / Hydro Power Image · 380×130px</span
+              >
+            </div>
+          </div>
+
+          <!-- Digital Banking -->
+          <div class="sec-card rv d2">
+            <div class="sc-head">
+              <div class="sc-icon">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75"
+                  />
+                </svg>
+              </div>
+              <span class="sc-alloc">+</span>
+            </div>
+            <div class="sc-name">Digital Banking &amp; Fintech</div>
+            <div class="sc-desc">
+              Actively exploring digital banking platforms, innovative digital
+              banking solutions, financial inclusion, and e-payment services —
+              participating in the future of Nepal's financial ecosystem.
+            </div>
+            <div class="sc-tags">
+              <span>Digital Banking</span><span>Fintech Services</span
+              ><span>E-Payments</span>
+            </div>
+            <div
+              style="
+                width: 100%;
+                height: 130px;
+                margin-top: 1.1rem;
+                border-radius: 3px;
+                overflow: hidden;
+                object-fit: cover;
+                display: block;
+              "
+              class="ph"
+            >
+              <img
+                src="assets/image14.png"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+              <span class="ph-lbl" style="font-size: 0.58rem"
+                >Digital Banking Image · 380×130px</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ IPO VISION ═══════════ -->
+    <section id="ipo" class="pad">
+      <div class="wrap ipo-rel">
+        <div class="ipo-head rv">
+          <span
+            class="eyebrow"
+            style="justify-content: center; color: var(--gold2)"
+            >Capital Market Strategy</span
+          >
+          <h2 class="serif" style="color: #fff">
+            IPO Vision &amp;
+            <em style="color: var(--gold3)">Capital Roadmap</em>
+          </h2>
+          <p>
+            A clearly defined pathway to Nepal's capital markets — targeting IPO
+            issuance by Nepali calendar year 2083/84 in full compliance with
+            SEBON regulations.
+          </p>
+        </div>
+
+        <div class="ipo-timeline rv">
+          <div class="ipo-step">
+            <div class="ipo-dot">①</div>
+            <div class="ipo-stage">Current Stage</div>
+            <div class="ipo-amount">NPR 50<small>M</small></div>
+            <div class="ipo-label">
+              Authorized Capital<br />35–40 Shareholders
+            </div>
+          </div>
+          <div class="ipo-step">
+            <div class="ipo-dot">②</div>
+            <div class="ipo-stage">Near-Term Goal</div>
+            <div class="ipo-amount">NPR 500<small>M</small></div>
+            <div class="ipo-label">
+              Target Paid-up Capital<br />~150 Shareholders
+            </div>
+          </div>
+          <div class="ipo-step">
+            <div class="ipo-dot">③</div>
+            <div class="ipo-stage">Pre-IPO</div>
+            <div class="ipo-amount">NPR 750<small>M</small></div>
+            <div class="ipo-label">
+              Authorized &amp; Paid-up<br />Public Ltd. Status
+            </div>
+          </div>
+          <div class="ipo-step">
+            <div class="ipo-dot">④</div>
+            <div class="ipo-stage">IPO — 2083/84</div>
+            <div class="ipo-amount">NPR 250<small>M</small></div>
+            <div class="ipo-label">Raised from IPO<br />SEBON Compliant</div>
+          </div>
+        </div>
+
+        <div class="ipo-quote-box rv d1">
+          <blockquote>
+            "The IPO is viewed not as an exit opportunity, but as a platform for
+            shared long-term growth — ensuring existing shareholders feel
+            confident to remain invested and benefit from enduring value
+            creation."
+          </blockquote>
+          <cite>— Subha Ventures Investor Manual 2082</cite>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ STATS ═══════════ -->
+    <section id="stats" class="pad-sm">
+      <div class="wrap">
+        <div class="stats-grid">
+          <div class="stat-cell rv">
+            <span class="stat-val"
+              ><span class="cu" data-t="50">0</span><sup>M NPR</sup></span
+            >
+            <span class="stat-lbl">Authorized Capital</span>
+            <span class="stat-sub">Current fiscal year</span>
+          </div>
+          <div class="stat-cell rv d1">
+            <span class="stat-val"
+              ><span class="cu" data-t="500">0</span><sup>M NPR</sup></span
+            >
+            <span class="stat-lbl">Target Paid-up Capital</span>
+            <span class="stat-sub">Near-term milestone</span>
+          </div>
+          <div class="stat-cell rv d2">
+            <span class="stat-val"
+              ><span class="cu" data-t="150">0</span><sup>+</sup></span
+            >
+            <span class="stat-lbl">Target Shareholders</span>
+            <span class="stat-sub">Long-term committed investors</span>
+          </div>
+          <div class="stat-cell rv d3">
+            <span class="stat-val"><span class="cu" data-t="5">0</span></span>
+            <span class="stat-lbl">Core Business Sectors</span>
+            <span class="stat-sub">Diversified portfolio</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ GOVERNANCE ═══════════ -->
+    <section id="governance" class="pad">
+      <div class="wrap">
+        <div class="gov-cols">
+          <!-- Left image -->
+          <div class="rv rv-left">
+            <div class="gov-img ph">
+              <img
+                src="assets/image15.png"
+                alt="Board Meeting"
+                style="
+                  width: 500%;
+                  height: 500px;
+                  object-fit: cover;
+                  display: block;
+                  border-radius: 5px;
+                "
+              />
+              <svg
+                class="ph-ico"
+                fill="none"
+                stroke="rgba(224,168,32,.5)"
+                stroke-width="1.2"
+                viewBox="0 0 24 24"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <circle cx="8.5" cy="8.5" r="1.5" />
+                <path d="m21 15-5-5L5 21" />
+              </svg>
+              <span class="ph-lbl"
+                >Board / Governance Photo<br />560 × 460 px</span
+              >
+            </div>
+          </div>
+
+          <!-- Right content -->
+          <div class="rv rv-right">
+            <span class="eyebrow">Governance Philosophy</span>
+            <h2 class="serif">
+              Built on <em>Institutional</em><br />Grade Governance
+            </h2>
+            <div class="rule"></div>
+            <p class="body-text" style="margin-bottom: 1.4rem">
+              Strong governance is central to Subha Ventures' public company
+              ambitions. Experienced professionals from accounting, banking, and
+              insurance ensure a governance culture aligned with public market
+              expectations.
+            </p>
+
+            <div class="gov-list">
+              <div class="gov-item">
+                <div class="gov-num">01</div>
+                <div>
+                  <h4>Transparent Financial Reporting</h4>
+                  <p>
+                    Full disclosure standards adopted early, preparing for
+                    public market scrutiny and SEBON compliance.
+                  </p>
+                </div>
+              </div>
+              <div class="gov-item">
+                <div class="gov-num">02</div>
+                <div>
+                  <h4>Professional Management Structure</h4>
+                  <p>
+                    Clear separation between ownership and operations with
+                    professional management for each subsidiary.
+                  </p>
+                </div>
+              </div>
+              <div class="gov-item">
+                <div class="gov-num">03</div>
+                <div>
+                  <h4>Regulatory Compliance</h4>
+                  <p>
+                    All structural, regulatory, and governance requirements for
+                    Public Limited Company conversion actively underway.
+                  </p>
+                </div>
+              </div>
+              <div class="gov-item">
+                <div class="gov-num">04</div>
+                <div>
+                  <h4>Shareholder Protection</h4>
+                  <p>
+                    Dividend policy, reinvestment strategy, and transparent
+                    communication designed to retain shareholder confidence
+                    post-IPO.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="investors-box">
+              <h4>Current Investor Base</h4>
+              <p>35–40 credible shareholders including:</p>
+              <div class="inv-grid">
+                <div class="inv-item">
+                  <div class="inv-dot"></div>
+                  Chartered Accountants
+                </div>
+                <div class="inv-item">
+                  <div class="inv-dot"></div>
+                  Senior Bankers
+                </div>
+                <div class="inv-item">
+                  <div class="inv-dot"></div>
+                  Insurance Experts
+                </div>
+                <div class="inv-item">
+                  <div class="inv-dot"></div>
+                  Business Leaders
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ 5-YEAR ROADMAP ═══════════ -->
+    <section id="roadmap" class="pad">
+      <div class="wrap">
+        <div class="roadmap-intro rv">
+          <span class="eyebrow" style="justify-content: center"
+            >Five-Year Strategic Objectives</span
+          >
+          <h2 class="serif" style="text-align: center">
+            The Path to <em>Public Leadership</em>
+          </h2>
+          <p>
+            A clearly articulated roadmap aligned with Nepal's corporate and
+            regulatory landscape, from transformation to IPO and beyond.
+          </p>
+        </div>
+
+        <div class="road-grid">
+          <div class="road-card rv">
+            <div class="road-yr">Y·1</div>
+            <div class="road-title">Public Ltd. Conversion</div>
+            <ul class="road-list">
+              <li>Complete conversion to Public Limited Company</li>
+              <li>Expand shareholder base to ~150 investors</li>
+              <li>Increase paid-up capital to NPR 500M</li>
+              <li>Establish subsidiary structure per sector</li>
+            </ul>
+          </div>
+          <div class="road-card rv d1">
+            <div class="road-yr">Y·2</div>
+            <div class="road-title">Operational Buildout</div>
+            <ul class="road-list">
+              <li>Scale IT subsidiary for revenue generation</li>
+              <li>Operationalize polymers manufacturing unit</li>
+              <li>Launch boutique hotel in Kathmandu</li>
+              <li>Begin coffee &amp; tea export operations</li>
+            </ul>
+          </div>
+          <div class="road-card rv d2">
+            <div class="road-yr">Y·3</div>
+            <div class="road-title">Expansion Phase</div>
+            <ul class="road-list">
+              <li>Expand IT services to international markets</li>
+              <li>Begin hotel planning for Pokhara &amp; Chitwan</li>
+              <li>Achieve manufacturing operational breakeven</li>
+              <li>Deepen power sector investments</li>
+            </ul>
+          </div>
+          <div class="road-card rv d3">
+            <div class="road-yr">Y·4</div>
+            <div class="road-title">Pre-IPO Preparation</div>
+            <ul class="road-list">
+              <li>Strengthen internal controls &amp; audit systems</li>
+              <li>Appoint issue managers, auditors, legal advisors</li>
+              <li>Enhance capital to NPR 750M</li>
+              <li>Establish sustainable diversified revenues</li>
+            </ul>
+          </div>
+          <div class="road-card rv d1">
+            <div class="road-yr">Y·5</div>
+            <div class="road-title">IPO &amp; Public Listing</div>
+            <ul class="road-list">
+              <li>IPO issuance by BS 2083/84</li>
+              <li>NPR 250M raised from public offering</li>
+              <li>Full SEBON-compliant listing process</li>
+              <li>Public limited company fully operational</li>
+            </ul>
+          </div>
+          <div class="road-card dark rv d2">
+            <div class="road-yr">∞</div>
+            <div class="road-title">Long-Term Vision</div>
+            <ul class="road-list">
+              <li>Trusted institutional investment platform in Nepal</li>
+              <li>Leading Nepali public holding company</li>
+              <li>Meaningful contribution to Nepal's GDP</li>
+              <li>Competitive long-term shareholder returns</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ COMMITMENT ═══════════ -->
+    <section id="commitment" class="pad">
+      <div class="wrap">
+        <div class="commit-head rv">
+          <span
+            class="eyebrow"
+            style="justify-content: center; color: var(--gold2)"
+            >Stakeholder Commitment</span
+          >
+          <h2 class="serif" style="color: #fff; text-align: center">
+            Committed to Every<br /><em style="color: var(--gold3)"
+              >Stakeholder</em
+            >
+          </h2>
+        </div>
+        <div class="commit-grid">
+          <div class="commit-card rv">
+            <div class="commit-ico">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"
+                />
+              </svg>
+            </div>
+            <div class="commit-title">Shareholders</div>
+            <div class="commit-desc">
+              Sustainable returns, full transparency, long-term value
+              appreciation, and a governance culture that protects investor
+              interests before and after IPO.
+            </div>
+          </div>
+          <div class="commit-card rv d1">
+            <div class="commit-ico">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"
+                />
+              </svg>
+            </div>
+            <div class="commit-title">Employees</div>
+            <div class="commit-desc">
+              Professional growth, skill development, organizational stability,
+              and fair employment practices that attract and retain Nepal's best
+              talent across subsidiaries.
+            </div>
+          </div>
+          <div class="commit-card rv d2">
+            <div class="commit-ico">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M10.05 4.575a1.575 1.575 0 10-3.15 0v3m3.15-3v-1.5a1.575 1.575 0 013.15 0v1.5m-3.15 0l.075 5.925m3.075.75V4.575m0 0a1.575 1.575 0 013.15 0V15M6.9 7.575a1.575 1.575 0 10-3.15 0v8.175a6.75 6.75 0 006.75 6.75h2.018a5.25 5.25 0 003.712-1.538l1.732-1.732a5.25 5.25 0 001.538-3.712l.003-2.024a.668.668 0 01.198-.471 1.575 1.575 0 10-2.228-2.228"
+                />
+              </svg>
+            </div>
+            <div class="commit-title">Partners</div>
+            <div class="commit-desc">
+              Trust-based, long-term strategic collaboration built on shared
+              values, mutual benefit, and a commitment to Nepal's broader
+              economic ecosystem.
+            </div>
+          </div>
+          <div class="commit-card rv d3">
+            <div class="commit-ico">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3"
+                />
+              </svg>
+            </div>
+            <div class="commit-title">Society &amp; Nepal</div>
+            <div class="commit-desc">
+              Ethical business practices, employment generation, and meaningful
+              contribution to Nepal's economic development and transition to a
+              modern, diversified economy.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ CONTACT ═══════════ -->
+    <section id="contact" class="pad">
+      <div class="wrap">
+        <div class="contact-cols">
+          <!-- Left info -->
+          <div class="rv rv-left">
+            <span class="eyebrow">Get In Touch</span>
+            <h2 class="serif">Connect With<br /><em>Subha Ventures</em></h2>
+            <div class="rule"></div>
+            <p class="body-text" style="max-width: 100%; margin-bottom: 1.8rem">
+              Whether you're a prospective long-term investor, business partner,
+              or simply want to learn more about Subha Ventures Limited — we
+              welcome meaningful conversations. Every serious enquiry is
+              responded to within 48 hours.
+            </p>
+
+            <div class="contact-info">
+              <div class="ci-row">
+                <div class="ci-ico">
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <div class="ci-lbl">Office Address</div>
+                  <div class="ci-val">
+                    Hattisar 01, Kathmandu Metropolitan City <br />Kathmandu
+                    District, Bagmati Province, Nepal
+                  </div>
+                </div>
+              </div>
+              <div class="ci-row">
+                <div class="ci-ico">
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <div class="ci-lbl">Landmark / Direction</div>
+                  <div class="ci-val">
+                    Near Siddhartha bank<br />Way to Kamal Pokhari, Kathmandu
+                  </div>
+                </div>
+              </div>
+              <div class="ci-row">
+                <div class="ci-ico">
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <div class="ci-lbl">Email</div>
+                  <div class="ci-val">info@subhaventures.com.np</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Google Maps — Bagdol, Lalitpur -->
+            <div class="map-box">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.6!2d85.31!3d27.682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19c4a6b64c5b%3A0x0!2sBagdol%2C%20Lalitpur%2044600!5e0!3m2!1sen!2snp!4v1700000000000"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Subha Ventures Office, Bagdol Lalitpur"
+              ></iframe>
+            </div>
+          </div>
+
+          <!-- Right form -->
+          <div class="rv rv-right">
+            <div class="form-box">
+              <div class="form-tabs">
+                <button class="ftab active" data-t2="investor">
+                  Investor Enquiry
+                </button>
+                <button class="ftab" data-t2="partner">Business Partner</button>
+                <button class="ftab" data-t2="general">General</button>
+              </div>
+
+              <div id="form-fields">
+                <div class="frow2">
+                  <div class="fg">
+                    <label class="fl">Full Name *</label
+                    ><input
+                      class="fi"
+                      type="text"
+                      id="fn"
+                      placeholder="Your full name"
+                    />
+                  </div>
+                  <div class="fg">
+                    <label class="fl">Email *</label
+                    ><input
+                      class="fi"
+                      type="email"
+                      id="fe"
+                      placeholder="your@email.com"
+                    />
+                  </div>
+                </div>
+                <div class="frow2">
+                  <div class="fg">
+                    <label class="fl">Phone</label
+                    ><input
+                      class="fi"
+                      type="tel"
+                      id="fph"
+                      placeholder="+977 98XXXXXXXX"
+                    />
+                  </div>
+                  <div class="fg" id="sel-group">
+                    <label class="fl">Investment Sector</label>
+                    <select class="fsel" id="fsel">
+                      <option value="">Select sector…</option>
+                      <option>Information Technology (25%)</option>
+                      <option>Hospitality &amp; Tourism (25%)</option>
+                      <option>Manufacturing — Polymers (20%)</option>
+                      <option>Agriculture — Coffee &amp; Tea (15%)</option>
+                      <option>Power Sector — Hydro &amp; Solar (15%)</option>
+                      <option>All Sectors / General Shareholding</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="fg">
+                  <label class="fl">Message *</label
+                  ><textarea
+                    class="fta"
+                    id="fm"
+                    placeholder="Tell us about your interest in Subha Ventures and your investment outlook…"
+                  ></textarea>
+                </div>
+                <button class="fsub" id="fsub">Send Enquiry →</button>
+                <p
+                  style="
+                    font-size: 0.66rem;
+                    color: var(--tsoft);
+                    text-align: center;
+                    margin-top: 0.7rem;
+                  "
+                >
+                  We respond to all serious enquiries within 48 hours.
+                </p>
+              </div>
+
+              <div class="form-success" id="form-ok">
+                <div class="fs-ico">
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4.5 12.75l6 6 9-13.5"
+                    />
+                  </svg>
+                </div>
+                <h3
+                  style="
+                    font-family: var(--fh);
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    color: var(--navy);
+                    margin-bottom: 0.5rem;
+                  "
+                >
+                  Enquiry Received
+                </h3>
+                <p
+                  style="
+                    font-size: 0.85rem;
+                    font-weight: 300;
+                    color: var(--tmid);
+                    line-height: 1.7;
+                  "
+                >
+                  Thank you for your interest in Subha Ventures Limited. Our
+                  team will review your message and respond within 48 hours.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer>
+      <div class="wrap">
+        <div class="ft-top">
+          <div class="ft-grid">
+            <div>
+              <a
+                href="#hero"
+                class="logo-link"
+                style="margin-bottom: 1rem; display: inline-flex"
+              >
+                <div class="logo-emblem"></div>
+                <div class="logo-words ft-brand-text">
+                  <strong>Subha Ventures</strong>
+                  <span>Innovate · Invest · Inspire</span>
+                </div>
+              </a>
+              <p class="ft-about">
+                An emerging, future-focused Nepali corporate entity building a
+                diversified public limited company with disciplined governance
+                and sectoral depth.
+              </p>
+            </div>
+            <div>
+              <div class="ft-col-h">Sectors</div>
+              <ul class="ft-links">
+                <li><a href="#sectors">Information Technology</a></li>
+                <li><a href="#sectors">Hospitality &amp; Tourism</a></li>
+                <li><a href="#sectors">Manufacturing</a></li>
+                <li><a href="#sectors">Agriculture</a></li>
+                <li><a href="#sectors">Power Sector</a></li>
+              </ul>
+            </div>
+            <div>
+              <div class="ft-col-h">Company</div>
+              <ul class="ft-links">
+                <li><a href="#about">About &amp; Vision</a></li>
+                <li><a href="#ipo">IPO Vision</a></li>
+                <li><a href="#governance">Governance</a></li>
+                <li><a href="#roadmap">5-Year Roadmap</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+            <div>
+              <div class="ft-col-h">Office</div>
+              <ul class="ft-links">
+                <li><a href="#">Bagdol, Ward No. 4</a></li>
+                <li><a href="#">Lalitpur Metropolitan City</a></li>
+                <li><a href="#">Lalitpur District</a></li>
+                <li><a href="#">Bagmati Province, Nepal</a></li>
+                <li>
+                  <a href="mailto:info@subhaventures.com.np"
+                    >info@subhaventures.com.np</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="ft-bot">
+          <p class="ft-copy">
+            © <span id="yr"></span> Subha Ventures Limited. All rights reserved.
+            Currently transforming to Public Limited Company status.
+          </p>
+          <div class="ft-legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Investor Disclosures</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ═══════════ JAVASCRIPT ═══════════ -->
+    <script>
+      // Year
+      document.getElementById("yr").textContent = new Date().getFullYear();
+
+      // Navbar scroll + active link
+      const nav = document.getElementById("nav");
+      const links = document.querySelectorAll("nav ul a");
+      const secs = document.querySelectorAll("section[id]");
+
+      window.addEventListener(
+        "scroll",
+        () => {
+          nav.classList.toggle("scrolled", window.scrollY > 50);
+          let cur = "";
+          secs.forEach((s) => {
+            if (window.scrollY >= s.offsetTop - 130) cur = s.id;
+          });
+          links.forEach((a) =>
+            a.classList.toggle("act", a.getAttribute("href") === "#" + cur),
+          );
+        },
+        { passive: true },
+      );
+
+      // Smooth scroll for all anchors
+      document.querySelectorAll('a[href^="#"]').forEach((a) => {
+        a.addEventListener("click", (e) => {
+          const t = document.querySelector(a.getAttribute("href"));
+          if (t) {
+            e.preventDefault();
+            t.scrollIntoView({ behavior: "smooth" });
+          }
+        });
+      });
+
+      // Hamburger menu
+      const hbg = document.getElementById("hbg");
+      const mob = document.getElementById("mob");
+      const mobClose = document.getElementById("mob-close");
+      function openMenu() {
+        hbg.classList.add("open");
+        mob.classList.add("open");
+        document.body.style.overflow = "hidden";
+      }
+      function closeMenu() {
+        hbg.classList.remove("open");
+        mob.classList.remove("open");
+        document.body.style.overflow = "";
+      }
+      hbg.addEventListener("click", () =>
+        mob.classList.contains("open") ? closeMenu() : openMenu(),
+      );
+      mobClose.addEventListener("click", closeMenu);
+      document
+        .querySelectorAll(".ml")
+        .forEach((l) => l.addEventListener("click", closeMenu));
+
+      // Intersection Observer — reveal on scroll
+      const ro = new IntersectionObserver(
+        (es) => {
+          es.forEach((e) => {
+            if (e.isIntersecting) e.target.classList.add("on");
+          });
+        },
+        { threshold: 0.07, rootMargin: "0px 0px -36px 0px" },
+      );
+      document
+        .querySelectorAll(".rv, .rv-left, .rv-right")
+        .forEach((el) => ro.observe(el));
+
+      // Count-up numbers
+      const co = new IntersectionObserver(
+        (es) => {
+          es.forEach((e) => {
+            if (!e.isIntersecting) return;
+            const el = e.target;
+            const target = Number(el.dataset.t);
+            let cur = 0;
+            const steps = 60;
+            const inc = target / steps;
+            const timer = setInterval(() => {
+              cur += inc;
+              if (cur >= target) {
+                el.textContent = target;
+                clearInterval(timer);
+              } else el.textContent = Math.floor(cur);
+            }, 30);
+            co.unobserve(el);
+          });
+        },
+        { threshold: 0.4 },
+      );
+      document.querySelectorAll(".cu").forEach((el) => co.observe(el));
+
+      // Allocation bar animation
+      const barObs = new IntersectionObserver(
+        (es) => {
+          es.forEach((e) => {
+            if (!e.isIntersecting) return;
+            document.querySelectorAll(".alloc-fill").forEach((b, i) => {
+              setTimeout(
+                () => {
+                  b.style.width = b.dataset.w + "%";
+                },
+                i * 120 + 200,
+              );
+            });
+            barObs.disconnect();
+          });
+        },
+        { threshold: 0.3 },
+      );
+      const allocEl = document.getElementById("alloc-bars");
+      if (allocEl) barObs.observe(allocEl);
+
+      // About tabs (Vision / Mission / Values)
+      document.querySelectorAll(".tab-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document
+            .querySelectorAll(".tab-btn")
+            .forEach((b) => b.classList.remove("active"));
+          document
+            .querySelectorAll(".tab-pane")
+            .forEach((p) => p.classList.remove("active"));
+          btn.classList.add("active");
+          document.getElementById(btn.dataset.tab).classList.add("active");
+        });
+      });
+
+      // Contact form tabs
+      document.querySelectorAll(".ftab").forEach((t) => {
+        t.addEventListener("click", () => {
+          document
+            .querySelectorAll(".ftab")
+            .forEach((x) => x.classList.remove("active"));
+          t.classList.add("active");
+          const type = t.dataset.t2;
+          const sg = document.getElementById("sel-group");
+          const msg = document.getElementById("fm");
+          if (type === "investor") {
+            sg.style.display = "";
+            msg.placeholder =
+              "Tell us about your investment interest and long-term outlook…";
+          } else if (type === "partner") {
+            sg.style.display = "none";
+            msg.placeholder =
+              "Tell us about your business and how you envision collaboration with Subha Ventures…";
+          } else {
+            sg.style.display = "none";
+            msg.placeholder = "How can we help you?";
+          }
+        });
+      });
+
+      // Form submission
+      document.getElementById("fsub").addEventListener("click", () => {
+        const n = document.getElementById("fn").value.trim();
+        const e = document.getElementById("fe").value.trim();
+        const m = document.getElementById("fm").value.trim();
+        if (!n || !e || !m) {
+          alert("Please fill in your name, email, and message.");
+          return;
+        }
+        document.getElementById("form-fields").style.display = "none";
+        document.getElementById("form-ok").classList.add("show");
+      });
+    </script>
+  </body>
+</html>
